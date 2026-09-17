@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xədisim 💙</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden}
+body{
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at center,#123b86 0,#06132f 42%,#020817 100%);
+  font-family:Arial,sans-serif;color:white;
+}
+.card{
+  width:88%;max-width:430px;padding:48px 20px;text-align:center;
+  border-radius:30px;background:rgba(10,35,85,.55);
+  border:1px solid rgba(120,190,255,.35);
+  box-shadow:0 0 45px rgba(30,130,255,.35);
+  backdrop-filter:blur(8px);z-index:2;
+}
+.rose{font-size:58px;margin-bottom:12px}
+h1{
+  margin:0;font-size:38px;line-height:1.15;
+  text-shadow:0 0 14px #55aaff,0 0 30px #1478ff;
+}
+p{font-size:19px;margin:18px 0 0;opacity:.95}
+.heart{
+  position:absolute;bottom:-40px;font-size:25px;
+  animation:up linear infinite;opacity:.85
+}
+@keyframes up{
+  0%{transform:translateY(0) scale(.8);opacity:0}
+  15%{opacity:.9}
+  100%{transform:translateY(-115vh) scale(1.2) rotate(25deg);opacity:0}
+}
+.spark{position:absolute;width:4px;height:4px;border-radius:50%;
+background:#9bd7ff;box-shadow:0 0 12px #4da9ff;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.2;transform:scale(.4)}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="rose">💙🌹💙</div>
+  <h1>Səni sevirəm,<br>Xədisim 💙</h1>
+  <p>Sən mənim üçün çox özəlsən ✨</p>
+</div>
+<script>
+const hs=["💙","💙","♡","💙","🌹","💙","💕"];
+for(let i=0;i<30;i++){
+ let e=document.createElement("div"); e.className="heart";
+ e.textContent=hs[Math.floor(Math.random()*hs.length)];
+ e.style.left=Math.random()*100+"vw";
+ e.style.animationDuration=(5+Math.random()*6)+"s";
+ e.style.animationDelay=(-Math.random()*8)+"s";
+ document.body.appendChild(e);
+}
+for(let i=0;i<35;i++){
+ let s=document.createElement("div");s.className="spark";
+ s.style.left=Math.random()*100+"vw";s.style.top=Math.random()*100+"vh";
+ s.style.animationDelay=Math.random()*2+"s";document.body.appendChild(s);
+}
+</script>
+</body>
+</html>
